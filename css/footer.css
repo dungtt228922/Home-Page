@@ -1,0 +1,11 @@
+footer {
+  height: 95px;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -315,7 +315,7 @@ footer {
     align-items: center;
 }
 
-@media screen and (max-width: 677px) {
+@media screen and (max-width: 678px) {
     .mb_screen .nav{
         display: flex;
         flex-direction: row;
@@ -366,6 +366,6 @@ footer {
     .blog_list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;git
+        gap: 24px;
     }
 }

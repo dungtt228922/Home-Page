@@ -1,0 +1,135 @@
+@import "./mixin.scss";
+
+.main_content {
+    @include columnFlex;
+    padding: 1rem;
+    gap: 1rem;
+    min-height: 100vh;
+
+    .title_content {
+        @include rowFlex;
+
+        .title{
+            font-weight: 600;
+            font-size: 50px;
+        }
+
+        .select_blog {
+            padding: 8px;
+            outline: none;
+        }
+    }
+
+    .blog_list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+
+        .card {
+            @include columnFlex;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #cccccc78;
+
+            img {
+                width: 100%;
+            }
+
+            .content_card {
+                @include columnFlex;
+                padding: 0 0 12px 12px;
+                margin-top: 16px;
+                gap: 20px;
+
+                .blog_info {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                .blog_info_items {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                }
+            }
+
+            .title_card {
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .description_card {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .btn_read {
+                background-color: rgba(255, 255, 255, 0);
+                border: 1px solid #cccccc78;
+                color: rgb(182, 32, 32);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                padding: 9px;
+
+                .arrow_vector {
+                    width: 26px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+
+            .pagination_ele {
+                @include columnFlex;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-weight: 700;
+
+                &:hover {
+                    @include hover;
+                }
+            }
+
+            .available_btn {
+                background-color: rgb(196, 0, 0, 1);
+                border-radius: 50%;
+
+                &:hover {
+                    @include hover;
+                }
+            }
+
+            .disable_btn {
+                background-color: rgba(229, 229, 229, 1);
+                border-radius: 50%;
+
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

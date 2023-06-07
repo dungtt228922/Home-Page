@@ -1,0 +1,125 @@
+.main_content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  min-height: 100vh;
+}
+.main_content .title_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_content .title_content .title {
+  font-weight: 600;
+  font-size: 50px;
+}
+.main_content .title_content .select_blog {
+  padding: 8px;
+  outline: none;
+}
+.main_content .blog_list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.main_content .blog_list .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+}
+.main_content .blog_list .card img {
+  width: 100%;
+}
+.main_content .blog_list .card .content_card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 12px 12px;
+  margin-top: 16px;
+  gap: 20px;
+}
+.main_content .blog_list .card .content_card .blog_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.main_content .blog_list .card .content_card .blog_info_items {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.main_content .blog_list .card .title_card {
+  font-weight: 600;
+  font-size: 18px;
+}
+.main_content .blog_list .card .description_card {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main_content .blog_list .card .btn_read {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+  color: rgb(182, 32, 32);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+}
+.main_content .blog_list .card .btn_read .arrow_vector {
+  width: 26px;
+}
+.main_content .pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main_content .pagination ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.main_content .pagination ul .pagination_ele {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.main_content .pagination ul .pagination_ele:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+}
+.main_content .pagination ul .available_btn {
+  background-color: rgb(196, 0, 0);
+  border-radius: 50%;
+}
+.main_content .pagination ul .available_btn:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+}
+.main_content .pagination ul .disable_btn {
+  background-color: rgb(229, 229, 229);
+  border-radius: 50%;
+}
+.main_content .pagination ul .disable_btn:hover {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=main.css.map */
