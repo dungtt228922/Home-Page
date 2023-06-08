@@ -1,18 +1,347 @@
-/* Error: Expected expression.
- *    ,
- * 10 |     font-family:;
- *    |                 ^
- *    '
- *   scss\header.scss 10:17  @import
- *   scss\style.scss 1:9     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 10 \2502      font-family:;\d\a    \2502                  ^\a    \2575 \a   scss\\header.scss 10:17  @import\a   scss\\style.scss 1:9     root stylesheet";
+body {
+  padding: 0;
+  margin: 0;
 }
+
+.header {
+  font-family: "Noto Sans JP";
+  width: 100%;
+}
+.header .image_bg {
+  width: 100%;
+  aspect-ratio: 4/1;
+  position: relative;
+}
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 122px;
+  background-color: rgba(255, 255, 255, 0.628);
+  padding: 0 24px;
+  top: 0;
+}
+.header .nav .left_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-left: 40px;
+}
+.header .nav .left_nav .search_input {
+  width: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.header .nav .left_nav .search_input input {
+  width: 100%;
+  padding: 10px 32px 10px 16px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+  border-radius: 4px;
+}
+.header .nav .left_nav .search_input .search_icon {
+  position: absolute;
+  margin-right: 12px;
+}
+.header .nav .left_nav .search_input .search_icon:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+}
+.header .nav .right_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+  margin-right: 80px;
+}
+.header .nav .right_nav .blog_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.header .nav .right_nav .blog_area .btn {
+  padding: 8px 12px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.header .nav .right_nav .blog_area .btn_top {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(119, 3, 3);
+}
+.header .nav .right_nav .blog_area a {
+  text-decoration: none;
+  color: black;
+}
+.header .nav .right_nav .blog_area a:hover {
+  color: aliceblue;
+}
+.header .nav .right_nav .user_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.header .nav .right_nav .user_area .user.icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../font/SVN-Gilroy Regular.otf");
+}
+@font-face {
+  font-family: "SVN-Gilroy-Bold";
+  src: url("../font/SVN-Gilroy Bold.otf");
+}
+.main_content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  min-height: 100vh;
+}
+.main_content .title_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_content .title_content .title {
+  font-family: "Noto Sans JP";
+  font-weight: 600;
+  font-size: 50px;
+}
+.main_content .title_content .select_blog {
+  font-family: "Noto Sans JP";
+  padding: 8px;
+  outline: none;
+}
+.main_content .blog_list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.main_content .blog_list .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+}
+.main_content .blog_list .card img {
+  width: 100%;
+}
+.main_content .blog_list .card .content_card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 12px 12px;
+  margin-top: 16px;
+  gap: 20px;
+}
+.main_content .blog_list .card .content_card .blog_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.main_content .blog_list .card .content_card .blog_info_items {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.main_content .blog_list .card .title_card {
+  font-family: "SVN-Gilroy-Bold";
+  font-weight: 600;
+  font-size: 18px;
+}
+.main_content .blog_list .card .description_card {
+  font-family: "SVN-Gilroy";
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main_content .blog_list .card .btn_read {
+  font-family: "SVN-Gilroy";
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+  color: rgb(182, 32, 32);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+}
+.main_content .blog_list .card .btn_read .arrow_vector {
+  width: 26px;
+}
+.main_content .blog_list .card .btn_read:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+  color: white;
+}
+.main_content .pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.main_content .pagination ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.main_content .pagination ul .pagination_inside {
+  width: 40px;
+  height: 40px;
+}
+.main_content .pagination ul .pagination_ele {
+  display: flex;
+  flex-direction: column;
+  font-family: "SVN-Gilroy-Bold";
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.main_content .pagination ul .pagination_ele:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+}
+.main_content .pagination ul .available_btn {
+  color: white;
+  background-color: rgb(196, 0, 0);
+  border-radius: 50%;
+}
+.main_content .pagination ul .available_btn:hover {
+  background-color: rgb(255, 228, 228);
+  color: rgb(196, 0, 0);
+  cursor: pointer;
+}
+.main_content .pagination ul .disable_btn {
+  color: white;
+  background-color: rgb(229, 229, 229);
+  border-radius: 50%;
+}
+.main_content .pagination ul .disable_btn:hover {
+  cursor: not-allowed;
+}
+
+footer {
+  font-family: "Noto Sans JP";
+  height: 95px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mb_screen {
+    display: none;
+  }
+  .pc_screen {
+    display: flex;
+    flex-direction: row;
+  }
+  .blog_list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+@media screen and (max-Width: 768px) {
+  .mb_screen .nav {
+    display: flex;
+    justify-content: space-between;
+    height: 69px;
+    align-items: center;
+    padding: 0 16px;
+    background-color: white;
+  }
+  .mb_screen .nav i {
+    font-size: 20px;
+    margin: 0 45px 0 15px;
+  }
+  .mb_screen .nav img {
+    width: auto;
+    max-width: 30%;
+  }
+  .mb_screen .pagination ul {
+    padding-inline-start: 0;
+  }
+  .mb_screen .main_menu {
+    height: 300px;
+    width: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  .mb_screen .main_menu .main_menu_items {
+    width: 100%;
+    height: 30px;
+    padding: 5px 0;
+    text-align: center;
+  }
+  .mb_screen .main_menu .main_menu_items:hover {
+    background-color: rgb(255, 228, 228);
+    color: rgb(196, 0, 0);
+    cursor: pointer;
+  }
+  .mb_screen .main_menu .main_menu_items a {
+    text-decoration: none;
+    color: #000;
+  }
+  .mb_screen .main_menu .user_name {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .main_content .blog_list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .main_content .blog_list .card:nth-child(4), .main_content .blog_list .card:nth-child(5), .main_content .blog_list .card:nth-child(6), .main_content .blog_list .card:nth-child(7), .main_content .blog_list .card:nth-child(8), .main_content .blog_list .card:nth-child(9) {
+    display: none;
+  }
+  .main_content .pagination ul {
+    padding-inline-start: 0;
+  }
+  header .pc_screen {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

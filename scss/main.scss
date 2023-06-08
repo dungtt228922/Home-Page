@@ -1,4 +1,5 @@
 @import "./mixin.scss";
+@import "./font.scss";
 
 .main_content {
     @include columnFlex;
@@ -10,11 +11,13 @@
         @include rowFlex;
 
         .title{
+            font-family: 'Noto Sans JP';
             font-weight: 600;
             font-size: 50px;
         }
 
         .select_blog {
+            font-family: 'Noto Sans JP';
             padding: 8px;
             outline: none;
         }
@@ -57,11 +60,13 @@
             }
 
             .title_card {
+                font-family: 'SVN-Gilroy-Bold';
                 font-weight: 600;
                 font-size: 18px;
             }
 
             .description_card {
+                font-family: 'SVN-Gilroy';
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
@@ -70,6 +75,7 @@
             }
 
             .btn_read {
+                font-family: 'SVN-Gilroy';
                 background-color: rgba(255, 255, 255, 0);
                 border: 1px solid #cccccc78;
                 color: rgb(182, 32, 32);
@@ -81,6 +87,11 @@
 
                 .arrow_vector {
                     width: 26px;
+                }
+
+                &:hover {
+                    @include hover;
+                    color: white;
                 }
             }
         }
@@ -99,8 +110,14 @@
             align-items: center;
             gap: 16px;
 
+            .pagination_inside {
+              width: 40px;
+              height: 40px;
+            }
+
             .pagination_ele {
                 @include columnFlex;
+                font-family: 'SVN-Gilroy-Bold';
                 width: 40px;
                 height: 40px;
                 justify-content: center;
@@ -114,6 +131,7 @@
             }
 
             .available_btn {
+                color: white;
                 background-color: rgb(196, 0, 0, 1);
                 border-radius: 50%;
 
@@ -123,6 +141,7 @@
             }
 
             .disable_btn {
+                color: white;
                 background-color: rgba(229, 229, 229, 1);
                 border-radius: 50%;
 
