@@ -27,8 +27,8 @@ body {
 .header .nav .left_nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  gap: 30px;
   width: 50%;
   margin-left: 40px;
 }

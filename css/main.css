@@ -9,8 +9,8 @@
 .main_content {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 0 102px 96px 102px;
+  margin-top: 72px;
   min-height: 100vh;
 }
 .main_content .title_content {
@@ -18,6 +18,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 38px;
 }
 .main_content .title_content .title {
   font-family: "Noto Sans JP";
@@ -32,7 +33,8 @@
 .main_content .blog_list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  column-gap: 30px;
+  row-gap: 70px;
 }
 .main_content .blog_list .card {
   display: flex;
@@ -101,28 +103,29 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .main_content .pagination ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
-}
-.main_content .pagination ul .pagination_inside {
-  width: 40px;
-  height: 40px;
+  gap: 19px;
+  padding: 0;
+  margin: 0;
 }
 .main_content .pagination ul .pagination_ele {
   display: flex;
   flex-direction: column;
   font-family: "SVN-Gilroy-Bold";
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   font-weight: 700;
+  height: 32px;
+  width: 32px;
 }
 .main_content .pagination ul .pagination_ele:hover {
   background-color: rgb(255, 228, 228);
@@ -133,6 +136,8 @@
   color: white;
   background-color: rgb(196, 0, 0);
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 .main_content .pagination ul .available_btn:hover {
   background-color: rgb(255, 228, 228);
@@ -143,6 +148,8 @@
   color: white;
   background-color: rgb(229, 229, 229);
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 .main_content .pagination ul .disable_btn:hover {
   cursor: not-allowed;

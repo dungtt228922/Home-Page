@@ -10,6 +10,12 @@
     align-items: center;
 }
 
+@mixin rowFlexNotSpace {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 @mixin columnFlex{
     display: flex;
     flex-direction: column;
@@ -19,6 +25,16 @@
     background-color: rgba(255, 228, 228, 1);
     color: rgba(196, 0, 0, 1);
     cursor: pointer;
+}
+
+@mixin arrowButtonPagination() {
+    height: 40px;
+    width: 40px;
+}
+
+@mixin buttonPaginationElement() {
+    height: 32px;
+    width: 32px;
 }
 
 @mixin minWidth($value) {
