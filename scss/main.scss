@@ -61,8 +61,7 @@
 
             .content_card {
                 @include columnFlex;
-                padding: 0 0 12px 12px;
-                margin-top: 16px;
+                padding: 25px 13px 31px 20px;
                 gap: 20px;
 
                 .blog_info {
@@ -77,6 +76,7 @@
                     flex-direction: row;
                     align-items: center;
                     gap: 10px;
+                    font-family: 'SVN-Gilroy';
                 }
             }
 
