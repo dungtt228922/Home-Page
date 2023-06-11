@@ -1,0 +1,11 @@
+footer {
+  font-family: "Noto Sans JP";
+  height: 95px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=footer.css.map */
