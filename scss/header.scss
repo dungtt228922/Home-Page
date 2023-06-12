@@ -10,21 +10,26 @@ body {
 
     .image-bg {
         width: 100%;
-        aspect-ratio: 4/1;
         position: relative;
     }
 
     .nav {
         @include rowFlex;
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 122px;
         background-color: rgba(255, 255, 255, 0.628);
         top: 0;
+        z-index: 666;
+        transition: top 0.3s ease-in-out;
+
+        &.hover {
+            transform: translateY(-100%)
+        }
 
         .left-nav {
             @include rowFlexNotSpace;
-            gap: 30px;
+            gap: 32px;
             width: 50%;
             margin-left: 102px;
 
@@ -35,9 +40,11 @@ body {
                 flex-direction: row-reverse;
 
                 input {
+                    color: rgba(212, 209, 212, 1);
+                    font-family: 'Noto Sans JP';
                     width: 100%;
-                    padding: 10px 32px 10px 16px;
-                    font-size: 18px;
+                    padding: 10px 32px 12px 19px;
+                    font-size: 15px;
                     outline: none;
                     border: 1px solid #cccccc78;
                     border-radius: 4px;
@@ -45,7 +52,7 @@ body {
 
                 .search-icon {
                     position: absolute;
-                    margin-right: 12px;
+                    margin: 17px 15px 12px 0;
 
                     &:hover {
                         @include hover;
@@ -61,10 +68,11 @@ body {
 
             .blog-area {
                 @include rowFlex;
-                gap: 24px;
+                gap: 27px;
 
                 .btn {
-                    padding: 8px 12px;
+                    width: 51px;
+                    height: 31px;
                     outline: none;
                     cursor: pointer;
                     border: none;
@@ -72,9 +80,10 @@ body {
                 }
 
                 .btn-top {
+                    font-family: 'Noto Sans JP';
                     color: white;
-                    font-size: 16px;
-                    font-weight: 400;
+                    font-size: 15px;
+                    font-weight: 500;
                     background-color: rgb(119, 3, 3);
                 }
 
@@ -90,7 +99,7 @@ body {
 
             .user-area {
                 @include rowFlex;
-                gap: 24px;
+                gap: 17px;
 
                 .user.icon {
                     font-size: 28px;

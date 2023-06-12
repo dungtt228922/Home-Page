@@ -1,18 +1,18 @@
-@media screen and (min-width: 501px) {
-  .mb_screen {
+@media screen and (min-width: 576px) {
+  .mb-screen {
     display: none;
   }
-  .pc_screen {
+  .pc-screen {
     display: flex;
   }
-  .blog_list {
+  .blog-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
   }
 }
-@media screen and (max-Width: 500px) {
-  .mb_screen .nav {
+@media screen and (max-Width: 575px) {
+  .mb-screen .nav {
     display: flex;
     justify-content: space-between;
     height: 69px;
@@ -20,25 +20,22 @@
     position: fixed;
     background-color: white;
   }
-  .mb_screen .nav div {
+  .mb-screen .nav div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 15%;
   }
-  .mb_screen .nav i {
-    font-size: 20px;
-  }
-  .mb_screen .nav img {
+  .mb-screen .nav img {
     width: auto;
     max-width: 30%;
   }
-  .mb_screen .image_bg_mb_screen {
+  .mb-screen .image-bg-mb-screen {
     width: 100%;
     margin-top: 69px;
   }
-  .mb_screen .menu_expand {
+  .mb-screen .menu-expand {
     background-color: white;
     position: fixed;
     gap: 12px;
@@ -49,25 +46,23 @@
     padding: 8px 0;
     height: auto;
     transition: all 2s;
+    z-index: 999;
   }
-  .mb_screen .menu_expand div {
+  .mb-screen .menu-expand div {
     margin-left: 5.5%;
     height: 30px;
   }
-  .mb_screen .menu_expand div a {
+  .mb-screen .menu-expand div a {
     text-decoration: none;
     color: #000;
   }
-  .mb_screen .menu_expand .user_name {
+  .mb-screen .menu-expand .user-name {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
   }
-  .mb_screen .pagination ul {
-    padding-inline-start: 0;
-  }
-  .mb_screen .main_menu {
+  .mb-screen .main-menu {
     height: 300px;
     width: 30%;
     position: absolute;
@@ -78,49 +73,62 @@
     background-color: #fff;
     display: none !important;
   }
-  .mb_screen .main_menu .main_menu_items {
+  .mb-screen .main-menu .main-menu-items {
     width: 100%;
     height: 30px;
     padding: 5px 0;
     text-align: center;
   }
-  .mb_screen .main_menu .main_menu_items:hover {
+  .mb-screen .main-menu .main-menu-items:hover {
     background-color: rgb(255, 228, 228);
     color: rgb(196, 0, 0);
     cursor: pointer;
   }
-  .mb_screen .main_menu .main_menu_items a {
+  .mb-screen .main-menu .main-menu-items a {
     text-decoration: none;
     color: #000;
   }
-  .mb_screen .main_menu .user_name {
+  .mb-screen .main-menu .user-name {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
-  .main_content {
+  .main-content {
     padding: 0 64px 53px 64px;
     margin-top: 70px;
   }
-  .main_content .title_content .title {
-    font-size: 24px;
+  .main-content .title-content .title {
+    font-size: 30px;
   }
-  .main_content .blog_list {
+  .main-content .blog-list {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 24px;
   }
-  .main_content .blog_list .card:nth-child(4), .main_content .blog_list .card:nth-child(5), .main_content .blog_list .card:nth-child(6), .main_content .blog_list .card:nth-child(7), .main_content .blog_list .card:nth-child(8), .main_content .blog_list .card:nth-child(9) {
+  .main-content .blog-list .card:nth-child(4), .main-content .blog-list .card:nth-child(5), .main-content .blog-list .card:nth-child(6), .main-content .blog-list .card:nth-child(7), .main-content .blog-list .card:nth-child(8), .main-content .blog-list .card:nth-child(9) {
     display: none;
   }
-  .main_content .pagination {
+  .main-content .pagination {
     margin-top: 67px;
   }
-  .main_content .pagination ul {
+  .main-content .pagination ul {
+    width: calc(100% - 4px);
     padding-inline-start: 0;
-    gap: 4px;
+    gap: 0;
+    justify-content: space-between;
   }
-  header .pc_screen {
+  .main-content .pagination ul li {
+    width: 11.1111111111%;
+    aspect-ratio: 1/1;
+  }
+  .main-content .pagination ul li .pagination-ele {
+    width: 100%;
+    height: 100%;
+  }
+  .main-content .pagination ul li .pagination-ele span {
+    line-height: 0;
+  }
+  header .pc-screen {
     display: none;
   }
 }

@@ -17,6 +17,8 @@
         }
 
         .select-blog {
+            width: 144px;
+            height: 40px;
             font-family: 'Noto Sans JP';
             padding: 8px;
             outline: none;
@@ -33,9 +35,8 @@
         .card {
             @include columnFlex;
             width: 100%;
-            border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #cccccc78;
+            border-radius: 8px;
 
             .image-card {
                 max-width: 100%;
@@ -63,6 +64,11 @@
                 @include columnFlex;
                 padding: 25px 13px 31px 20px;
                 gap: 20px;
+                border: 1px solid #cccccc78;
+                border-radius: 0 0 8px 8px;
+                border-top: none;
+                margin-top: -1px;
+
 
                 .blog-info {
                     display: flex;
@@ -71,12 +77,14 @@
                     gap: 20px;
                 }
 
-                .blog-info-items {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 10px;
-                    font-family: 'SVN-Gilroy';
+                .blog-info-items-left {
+                    @include blogInfoItems;
+                    gap: 4px;
+                }
+
+                .blog-info-items-right {
+                    @include blogInfoItems;
+                    gap: 9px;
                 }
             }
 
@@ -113,6 +121,7 @@
                 &:hover {
                     @include hover;
                     color: white;
+                    border-color: black;
                 }
             }
         }
@@ -130,7 +139,8 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 19px;
+            justify-content: center;
+            gap: 5px;
             padding: 0;
             margin: 0;
 
@@ -143,6 +153,7 @@
                 align-items: center;
                 border-radius: 50%;
                 font-weight: 700;
+                font-size: 20px;
                 @include buttonPaginationElement;
 
                 &:hover {

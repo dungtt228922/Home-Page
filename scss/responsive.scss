@@ -1,6 +1,6 @@
 @import "./mixin.scss";
 
-@include minWidth(501px){
+@include minWidth(576px){
     .mb-screen {
         display: none;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@include maxWidth(500px) {
+@include maxWidth(575px) {
     .mb-screen {
         .nav {
             display: flex;
@@ -30,10 +30,6 @@
                 @include rowFlexNotSpace;
                 justify-content: center;
                 width: 15%;
-            }
-
-            i {
-                font-size: 20px;
             }
 
             img {
@@ -58,6 +54,7 @@
             padding: 8px 0;
             height: auto;
             transition: all 2s;
+            z-index: 999;
 
             div {
                 margin-left: calc(5.5%);
@@ -72,13 +69,6 @@
             .user-name {
                 @include rowFlexNotSpace;
                 gap: 8px;
-            }
-        }
-
-        .pagination {
-
-            ul {
-                padding-inline-start: 0;
             }
         }
 
@@ -121,7 +111,7 @@
 
         .title-content {
             .title {
-                font-size: 24px;
+                font-size: 30px;
             }
         }
 
@@ -138,8 +128,24 @@
         .pagination {
             margin-top: 67px;
               ul{
+                width: calc(100% - 4px);
                 padding-inline-start: 0;
-                gap: 4px;
+                gap: 0;
+                justify-content: space-between;
+
+                li {
+                    width: calc(100% / 9);
+                    aspect-ratio: 1 / 1;
+                    .pagination-ele {
+                        width: 100%;
+                        height: 100%;
+
+                        span {
+                            line-height: 0;
+                        }
+                    }
+
+                }
               }
         }
     }
