@@ -1,13 +1,13 @@
 @import "./mixin.scss";
 @import "./font.scss";
 
-.main_content {
+.main-content {
     @include columnFlex;
     padding: 0 102px 96px 102px;
     margin-top: 72px;
     min-height: 100vh;
 
-    .title_content {
+    .title-content {
         @include rowFlex;
 
         .title{
@@ -16,7 +16,7 @@
             font-size: 50px;
         }
 
-        .select_blog {
+        .select-blog {
             font-family: 'Noto Sans JP';
             padding: 8px;
             outline: none;
@@ -25,7 +25,7 @@
         margin-bottom: 38px;
     }
 
-    .blog_list {
+    .blog-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 30px;
@@ -37,7 +37,7 @@
             overflow: hidden;
             border: 1px solid #cccccc78;
 
-            .image_card {
+            .image-card {
                 max-width: 100%;
                 width: 100%;
                 overflow: hidden;
@@ -59,19 +59,19 @@
                 }
             }
 
-            .content_card {
+            .content-card {
                 @include columnFlex;
                 padding: 25px 13px 31px 20px;
                 gap: 20px;
 
-                .blog_info {
+                .blog-info {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     gap: 20px;
                 }
 
-                .blog_info_items {
+                .blog-info-items {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -80,13 +80,13 @@
                 }
             }
 
-            .title_card {
+            .title-card {
                 font-family: 'SVN-Gilroy-Bold';
                 font-weight: 600;
                 font-size: 18px;
             }
 
-            .description_card {
+            .description-card {
                 font-family: 'SVN-Gilroy';
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
@@ -95,7 +95,7 @@
                 text-overflow: ellipsis;
             }
 
-            .btn_read {
+            .btn-read {
                 font-family: 'SVN-Gilroy';
                 background-color: rgba(255, 255, 255, 0);
                 border: 1px solid #cccccc78;
@@ -106,7 +106,7 @@
                 gap: 8px;
                 padding: 9px;
 
-                .arrow_vector {
+                .arrow-vector {
                     width: 19px;
                 }
 
@@ -134,7 +134,7 @@
             padding: 0;
             margin: 0;
 
-            .pagination_ele {
+            .pagination-ele {
                 @include columnFlex;
                 font-family: 'SVN-Gilroy-Bold';
                 width: 32px;
@@ -150,7 +150,7 @@
                 }
             }
 
-            .available_btn {
+            .available-btn {
                 color: white;
                 background-color: rgb(196, 0, 0, 1);
                 border-radius: 50%;
@@ -161,7 +161,7 @@
                 }
             }
 
-            .disable_btn {
+            .disable-btn {
                 color: white;
                 background-color: rgba(229, 229, 229, 1);
                 border-radius: 50%;

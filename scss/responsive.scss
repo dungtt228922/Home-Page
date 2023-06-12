@@ -1,15 +1,15 @@
 @import "./mixin.scss";
 
 @include minWidth(501px){
-    .mb_screen {
+    .mb-screen {
         display: none;
     }
 
-    .pc_screen {
+    .pc-screen {
         display: flex;
     }
 
-    .blog_list {
+    .blog-list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
@@ -17,7 +17,7 @@
 }
 
 @include maxWidth(500px) {
-    .mb_screen {
+    .mb-screen {
         .nav {
             display: flex;
             justify-content: space-between;
@@ -42,12 +42,12 @@
             }
         }
 
-        .image_bg_mb_screen {
+        .image-bg-mb-screen {
             width: 100%;
             margin-top: 69px;
         }
 
-        .menu_expand {
+        .menu-expand {
             background-color: white;
             position: fixed;
             gap: 12px;
@@ -69,7 +69,7 @@
                 }
             }
 
-            .user_name {
+            .user-name {
                 @include rowFlexNotSpace;
                 gap: 8px;
             }
@@ -82,7 +82,7 @@
             }
         }
 
-        .main_menu {
+        .main-menu {
             height: 300px;
             width: 30%;
             position: absolute;
@@ -91,7 +91,7 @@
             align-items: center;
             background-color: #fff;
             display: none !important;
-            .main_menu_items {
+            .main-menu-items {
                 width: 100%;
                 height: 30px;
                 padding: 5px 0;
@@ -107,7 +107,7 @@
                 }
             }
 
-            .user_name {
+            .user-name {
                 display: flex;
                 justify-content: center;
                 gap: 10px;
@@ -115,17 +115,17 @@
         }
     }
 
-    .main_content {
+    .main-content {
         padding: 0 64px 53px 64px;
         margin-top: 70px;
 
-        .title_content {
+        .title-content {
             .title {
                 font-size: 24px;
             }
         }
 
-        .blog_list {
+        .blog-list {
             display: grid;
             grid-template-columns: repeat(1, minmax(0, 1fr));
             gap: 24px;
@@ -145,7 +145,7 @@
     }
 
     header {
-        .pc_screen {
+        .pc-screen {
         display: none;
     }
     }

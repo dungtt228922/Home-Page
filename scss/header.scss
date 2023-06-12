@@ -8,7 +8,7 @@ body {
     font-family: 'Noto Sans JP';
     width: 100%;
 
-    .image_bg {
+    .image-bg {
         width: 100%;
         aspect-ratio: 4/1;
         position: relative;
@@ -22,13 +22,13 @@ body {
         background-color: rgba(255, 255, 255, 0.628);
         top: 0;
 
-        .left_nav {
+        .left-nav {
             @include rowFlexNotSpace;
             gap: 30px;
             width: 50%;
             margin-left: 102px;
 
-            .search_input {
+            .search-input {
                 width: 60%;
                 position: relative;
                 @include flexCenter;
@@ -43,7 +43,7 @@ body {
                     border-radius: 4px;
                 }
 
-                .search_icon {
+                .search-icon {
                     position: absolute;
                     margin-right: 12px;
 
@@ -54,12 +54,12 @@ body {
             }
         }
 
-        .right_nav {
+        .right-nav {
             @include rowFlex;
             width: 25%;
             margin-right: 102px;
 
-            .blog_area {
+            .blog-area {
                 @include rowFlex;
                 gap: 24px;
 
@@ -71,7 +71,7 @@ body {
                     border-radius: 4px;
                 }
 
-                .btn_top {
+                .btn-top {
                     color: white;
                     font-size: 16px;
                     font-weight: 400;
@@ -88,7 +88,7 @@ body {
                 }
             }
 
-            .user_area {
+            .user-area {
                 @include rowFlex;
                 gap: 24px;
 
