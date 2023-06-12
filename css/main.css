@@ -115,14 +115,14 @@
   align-items: center;
   gap: 8px;
   padding: 9px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease-in-out;
 }
 .main-content .blog-list .card .btn-read .arrow-vector {
   width: 19px;
 }
 .main-content .blog-list .card .btn-read:hover {
-  background-color: rgb(255, 228, 228);
-  color: rgb(196, 0, 0);
-  cursor: pointer;
+  background-color: cadetblue;
   color: white;
   border-color: black;
 }

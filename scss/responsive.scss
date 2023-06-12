@@ -25,6 +25,11 @@
             align-items: center;
             position: fixed;
             background-color: white;
+            transition: transform 1s ease-in-out;
+
+            &.scrolled {
+                transform: translateY(-100%)
+            }
 
             div {
                 @include rowFlexNotSpace;
@@ -48,13 +53,17 @@
             position: fixed;
             gap: 12px;
             width: 100%;
-            top: 69px;
-            display: none;
+            display: flex;
             flex-direction: column;
             padding: 8px 0;
             height: auto;
-            transition: all 2s;
             z-index: 999;
+            transition: 1s ease-in-out;
+            transform: translateY(-200%);
+
+            &.scrolled {
+                transform: translateY(69px);
+            }
 
             div {
                 margin-left: calc(5.5%);
@@ -63,6 +72,10 @@
                 a {
                     text-decoration: none;
                     color: #000;
+                }
+
+                &:hover {
+                    @include hover;
                 }
             }
 
