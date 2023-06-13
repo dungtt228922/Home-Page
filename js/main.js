@@ -4,17 +4,24 @@ let header_mb = document.getElementById('nav-mb')
 let header_pc = document.getElementById('nav-pc')
 
 window.onscroll = function(e) {
-    if (this.oldScroll < this.scrollY) {
-        header_pc.classList.remove('scrolled')
-        header_mb.classList.remove('scrolled')
-
+    if (this.scrollY === 0) {
+        header_pc.classList.remove('scrolled');
+        header_mb.classList.remove('scrolled');
+        console.log('At the top of the site');
     } else {
-        console.log('Lmao')
-        header_pc.classList.add('scrolled')
-        header_mb.classList.add('scrolled')
+        if (this.oldScroll < this.scrollY) {
+            console.log('Scrolled down');
+            header_pc.classList.add('scrolled');
+            header_mb.classList.add('scrolled');
+        } else {
+            header_pc.classList.remove('scrolled');
+            header_mb.classList.remove('scrolled');
+            console.log(this.scrollY);
+        }
     }
-    this.oldScroll = this.scrollY
-  }
+
+    this.oldScroll = this.scrollY;
+}
 
   menu_expand_icon.addEventListener('click', function () {
     if (menu_expand.classList.contains('scrolled')) {

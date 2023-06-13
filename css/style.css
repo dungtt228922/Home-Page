@@ -10,6 +10,7 @@ body {
 .header .image-bg {
   width: 100%;
   position: relative;
+  aspect-ratio: 2/1;
 }
 .header .nav {
   display: flex;
@@ -235,7 +236,7 @@ body {
   width: 19px;
 }
 .main-content .blog-list .card .btn-read:hover {
-  background-color: cadetblue;
+  background-color: rgb(95, 158, 160);
   color: white;
   border-color: black;
 }

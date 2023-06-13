@@ -10,6 +10,7 @@ body {
 .header .image-bg {
   width: 100%;
   position: relative;
+  aspect-ratio: 2/1;
 }
 .header .nav {
   display: flex;

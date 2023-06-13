@@ -122,7 +122,7 @@
   width: 19px;
 }
 .main-content .blog-list .card .btn-read:hover {
-  background-color: cadetblue;
+  background-color: rgb(95, 158, 160);
   color: white;
   border-color: black;
 }
