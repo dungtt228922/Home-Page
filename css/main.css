@@ -6,71 +6,98 @@
   font-family: "SVN-Gilroy-Bold";
   src: url("../font/SVN-Gilroy Bold.otf");
 }
-.main_content {
+.main-content {
   display: flex;
   flex-direction: column;
   padding: 0 102px 96px 102px;
   margin-top: 72px;
   min-height: 100vh;
 }
-.main_content .title_content {
+.main-content .title-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 38px;
 }
-.main_content .title_content .title {
+.main-content .title-content .title {
   font-family: "Noto Sans JP";
   font-weight: 600;
   font-size: 50px;
 }
-.main_content .title_content .select_blog {
+.main-content .title-content .select-blog {
+  width: 144px;
+  height: 40px;
   font-family: "Noto Sans JP";
   padding: 8px;
   outline: none;
 }
-.main_content .blog_list {
+.main-content .blog-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 30px;
   row-gap: 70px;
 }
-.main_content .blog_list .card {
+.main-content .blog-list .card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+  border-radius: 8px;
 }
-.main_content .blog_list .card img {
+.main-content .blog-list .card .image-card {
+  max-width: 100%;
   width: 100%;
+  overflow: hidden;
 }
-.main_content .blog_list .card .content_card {
+.main-content .blog-list .card .image-card img {
+  width: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  height: 100%;
+}
+.main-content .blog-list .card .image-card img:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  filter: blur(1px);
+  cursor: pointer;
+}
+.main-content .blog-list .card .content-card {
   display: flex;
   flex-direction: column;
-  padding: 0 0 12px 12px;
-  margin-top: 16px;
+  padding: 25px 13px 31px 20px;
   gap: 20px;
+  border: 1px solid rgba(204, 204, 204, 0.4705882353);
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+  margin-top: -1px;
 }
-.main_content .blog_list .card .content_card .blog_info {
+.main-content .blog-list .card .content-card .blog-info {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
-.main_content .blog_list .card .content_card .blog_info_items {
+.main-content .blog-list .card .content-card .blog-info-items-left {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
+  align-items: center;
+  font-family: "SVN-Gilroy";
+  gap: 4px;
 }
-.main_content .blog_list .card .title_card {
+.main-content .blog-list .card .content-card .blog-info-items-right {
+  display: flex;
+  align-items: center;
+  font-family: "SVN-Gilroy";
+  gap: 9px;
+}
+.main-content .blog-list .card .title-card {
   font-family: "SVN-Gilroy-Bold";
   font-weight: 600;
   font-size: 18px;
 }
-.main_content .blog_list .card .description_card {
+.main-content .blog-list .card .description-card {
   font-family: "SVN-Gilroy";
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -78,7 +105,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main_content .blog_list .card .btn_read {
+.main-content .blog-list .card .btn-read {
   font-family: "SVN-Gilroy";
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(204, 204, 204, 0.4705882353);
@@ -88,33 +115,35 @@
   align-items: center;
   gap: 8px;
   padding: 9px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease-in-out;
 }
-.main_content .blog_list .card .btn_read .arrow_vector {
-  width: 26px;
+.main-content .blog-list .card .btn-read .arrow-vector {
+  width: 19px;
 }
-.main_content .blog_list .card .btn_read:hover {
-  background-color: rgb(255, 228, 228);
-  color: rgb(196, 0, 0);
-  cursor: pointer;
+.main-content .blog-list .card .btn-read:hover {
+  background-color: rgb(95, 158, 160);
   color: white;
+  border-color: black;
 }
-.main_content .pagination {
+.main-content .pagination {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
-.main_content .pagination ul {
+.main-content .pagination ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 19px;
+  justify-content: center;
+  gap: 5px;
   padding: 0;
   margin: 0;
 }
-.main_content .pagination ul .pagination_ele {
+.main-content .pagination ul .pagination-ele {
   display: flex;
   flex-direction: column;
   font-family: "SVN-Gilroy-Bold";
@@ -124,34 +153,35 @@
   align-items: center;
   border-radius: 50%;
   font-weight: 700;
+  font-size: 20px;
   height: 32px;
   width: 32px;
 }
-.main_content .pagination ul .pagination_ele:hover {
+.main-content .pagination ul .pagination-ele:hover {
   background-color: rgb(255, 228, 228);
   color: rgb(196, 0, 0);
   cursor: pointer;
 }
-.main_content .pagination ul .available_btn {
+.main-content .pagination ul .available-btn {
   color: white;
   background-color: rgb(196, 0, 0);
   border-radius: 50%;
   height: 40px;
   width: 40px;
 }
-.main_content .pagination ul .available_btn:hover {
+.main-content .pagination ul .available-btn:hover {
   background-color: rgb(255, 228, 228);
   color: rgb(196, 0, 0);
   cursor: pointer;
 }
-.main_content .pagination ul .disable_btn {
+.main-content .pagination ul .disable-btn {
   color: white;
   background-color: rgb(229, 229, 229);
   border-radius: 50%;
   height: 40px;
   width: 40px;
 }
-.main_content .pagination ul .disable_btn:hover {
+.main-content .pagination ul .disable-btn:hover {
   cursor: not-allowed;
 }
 
